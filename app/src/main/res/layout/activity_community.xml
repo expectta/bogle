@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?><!--레이아웃의 중첩이 발생하지 않는다.
+weight(가중치)설정하여 화면에 비율적으로 적용할 수 있다.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CommunityActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/snsBoard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/introduceTutor"
+            android:textSize="22sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp">
+            <TextView
+                android:id="@+id/none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총 게시글 : "
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/counterText"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+            <TextView
+                android:id="@+id/counterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:gravity="end"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                >
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+   <ListView
+       android:id="@+id/planListView"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="17"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       >
+   </ListView>
+
+
+
+</LinearLayout>

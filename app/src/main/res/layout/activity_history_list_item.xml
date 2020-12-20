@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/myPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계획 날짜 : "
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/myPlanDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="날짜"
+            app:layout_constraintBaseline_toBaselineOf="@+id/myPlanTime"
+            app:layout_constraintLeft_toRightOf="@+id/myPlan"
+            app:layout_constraintTop_toTopOf="@+id/myPlan" />
+
+        <TextView
+            android:id="@+id/myPlanTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="시간"
+            app:layout_constraintLeft_toRightOf="@+id/myPlanDate"
+            app:layout_constraintTop_toTopOf="@+id/myPlanDate" />
+
+        <TextView
+            android:id="@+id/join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="참여인원"
+            app:layout_constraintRight_toLeftOf="@+id/myCurrentMember"
+            app:layout_constraintTop_toTopOf="@+id/myPlanDate" />
+
+
+        <TextView
+            android:id="@+id/myCurrentMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/myPlanTime"
+            app:layout_constraintRight_toLeftOf="@+id/mdivide"
+            app:layout_constraintTop_toTopOf="@+id/myPlanTime" />
+
+        <TextView
+            android:id="@+id/mdivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="/"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/myCurrentMember"
+            app:layout_constraintRight_toRightOf="@+id/myMaxMember"
+            app:layout_constraintTop_toTopOf="@+id/myMaxMember" />
+
+
+        <TextView
+            android:id="@+id/myMaxMember"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:hint="0 "
+            app:layout_constraintHorizontal_chainStyle="packed"
+
+            app:layout_constraintLeft_toRightOf="@+id/mdivide"
+            app:layout_constraintRight_toLeftOf="@+id/person"
+            app:layout_constraintTop_toTopOf="@+id/communityPlanTime" />
+
+        <TextView
+            android:id="@+id/person"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="명"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myPlanDate"
+            app:layout_constraintTop_toTopOf="@+id/myMaxMember" />
+
+        <TextView
+            android:id="@+id/myContents"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="[투어] 왕돌초 국내투어"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myPlanDate" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

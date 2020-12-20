@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="activityText">몇월 며칠 어디어디에서 활동 예정입니다.</string>
+    <string name="join">참여</string>
+    <string name="phoneNumber">연락처</string>
+    <string name="inputPhoneNumberHint">\'-\'를 빼고 입력해 주세요.</string>
+    <string name="buttonSignIn">회원가입</string>
+    <string name="signIn">회원가입</string>
+    <string name="normalMember">일반회원</string>
+    <string name="tutor">강사</string>
+    <string name="signInName">이름</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="passwordCheck">Password 확인</string>
+    <string name="licence">자격증을 첨부해주세요</string>
+    <string name="picture">사진을 첨부</string>
+    <string name="postPicture">첨부</string>
+    <string name="introduce">경력을 입력 해 주세요</string>
+    <string name="introduceTutor">다이빙 계획</string>
+</resources>

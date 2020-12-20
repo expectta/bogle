@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CommunityActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/snsBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="글 수정"
+            android:textSize="25sp" />
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="11">
+        <TextView
+            android:id="@+id/modifyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제목 : "
+            android:textSize="17sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/modifyEditTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+        <EditText
+            android:id="@+id/modifyEditTitle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toRightOf="@+id/modifyTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/modifyAddPicture"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/backGroundTopBar"
+            android:textSize="20sp"
+            android:textColor="#F3F2F5"
+            android:textStyle="bold"            app:layout_constraintTop_toBottomOf="@+id/modifyEditTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="사진 추가하기" />
+        <ImageView
+            android:id="@+id/modifyImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="22dp"
+            android:contentDescription="TODO"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modifyAddPicture" />
+
+        <!--        <android.support.v7.widget.RecyclerView-->
+        <!--            android:id="@+id/picture"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="100dp"-->
+        <!--            android:padding="3dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/addPicture"-->
+        <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--            >-->
+        <!--        </android.support.v7.widget.RecyclerView>-->
+        <TextView
+            android:id="@+id/contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="내용 : "
+            android:textSize="17sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modifyImage" />
+        <EditText
+            android:id="@+id/modifyEditContents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="내용을 작성하세요"
+            android:textSize="17sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/contents"
+            app:layout_constraintLeft_toRightOf="@+id/contents"
+            app:layout_constraintTop_toTopOf="@+id/contents" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/modifySubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/backGroundTopBar"
+            android:textSize="20sp"
+            android:layout_marginRight="3dp"
+            android:textColor="#F3F2F5"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="게시" />
+        <Button
+            android:id="@+id/modifyCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:background="@color/backGroundTopBar"
+            android:textSize="20sp"
+            android:textColor="#F3F2F5"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="취소" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="historyFontSize">18sp</dimen>
+    <dimen name="historyTextLayout_width">120dp</dimen>
+</resources>

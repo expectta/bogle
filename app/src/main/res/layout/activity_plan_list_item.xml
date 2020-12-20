@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계획 날짜 : "
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+
+        <TextView
+            android:id="@+id/communityPlanDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="날짜"
+            app:layout_constraintBaseline_toBaselineOf="@+id/communityPlanTime"
+            app:layout_constraintLeft_toRightOf="@+id/plan"
+            app:layout_constraintTop_toTopOf="@+id/plan"
+        />
+
+        <TextView
+            android:id="@+id/communityPlanTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="시간"
+            app:layout_constraintLeft_toRightOf="@+id/communityPlanDate"
+            app:layout_constraintTop_toTopOf="@+id/communityPlanDate"
+            />
+
+
+        <TextView
+            android:id="@+id/communityCurrentMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/communityPlanTime"
+            app:layout_constraintRight_toLeftOf="@+id/divide"
+            app:layout_constraintTop_toTopOf="@+id/communityPlanTime" />
+
+        <TextView
+            android:id="@+id/divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="/"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/communityCurrentMember"
+            app:layout_constraintRight_toRightOf="@+id/communityMaxMember"
+            app:layout_constraintTop_toTopOf="@+id/communityCurrentMember" />
+
+
+        <TextView
+            android:id="@+id/communityMaxMember"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:hint="0 "
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/divide"
+            app:layout_constraintRight_toLeftOf="@+id/person"
+            app:layout_constraintTop_toTopOf="@+id/communityPlanTime" />
+        <TextView
+            android:id="@+id/person"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:hint=" 명"
+            app:layout_constraintHorizontal_chainStyle="packed"
+
+            app:layout_constraintLeft_toRightOf="@+id/communityMaxMember"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/communityPlanTime" />
+        <TextView
+            android:id="@+id/myPlan"
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="활동계획 내용 : "
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/communityPlanDate" />
+
+        <TextView
+            android:id="@+id/communityContents"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="[투어] 왕돌초 국내투어"
+            app:layout_constraintLeft_toRightOf="@+id/myPlan"
+            app:layout_constraintTop_toTopOf="@+id/myPlan" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

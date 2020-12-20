@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 카메라와 갤러리를 접근할 수 있는 권한을 받는다 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="ExtraText"
+        tools:targetApi="n">
+        <activity android:name=".WebActivity"></activity>
+
+        <service
+            android:name=".NoticeService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".AlarmActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.myapplication.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver android:name=".AlarmReceiver" />
+
+        <activity android:name=".MyInfomationActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".PostModifyActivity" />
+        <activity android:name=".WriteCardActivity" />
+        <activity android:name=".ShareActivity" />
+        <activity
+            android:name=".PlanListData"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".NoticeActivity"
+            android:theme="@style/Transparent" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AccountActivity" />
+        <activity
+            android:name=".AdministratorActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".CommunityActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".CalenderActivity" />
+        <activity
+            android:name=".HistoryActivity"
+            android:launchMode="singleTop" />
+    </application>
+
+</manifest>

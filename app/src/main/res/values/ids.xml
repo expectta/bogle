@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="radioGroupCheckUser" type="id" />
+    <item name="forTutor" type="id" />
+    <item name="signInEditTextName" type="id" />
+    <item name="signInEditTextEmail" type="id" />
+    <item name="signInEditTextPhoneNumber" type="id" />
+    <item name="signInEditTextPassword" type="id" />
+</resources>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoticeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/corner_shape"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/noticeTextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="활동계획 수정"
+            android:textColor="@color/transparent"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/administratorCalender"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="33dp"
+            app:layout_constraintTop_toTopOf="@+id/noticeTextViewTitle"
+            android:padding="4dp"
+            android:orientation="vertical"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/calenderButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="달력보기"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+                <TextView
+                    android:id="@+id/modifyDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/transparent"
+                    app:layout_constraintTop_toTopOf="@+id/calenderButton"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/calenderButton"
+                    android:text="날짜: "
+                    >
+                </TextView>
+                <TextView
+                    android:id="@+id/modifyInputDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/transparent"
+                    app:layout_constraintTop_toTopOf="@+id/modifyDate"
+                    app:layout_constraintLeft_toRightOf="@+id/modifyDate"
+                    android:hint="달력으로 날짜를 지정하세요">
+                </TextView>
+                <TextView
+                    android:id="@+id/modifyInputTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/transparent"
+                    app:layout_constraintTop_toTopOf="@+id/modifyInputDate"
+                    app:layout_constraintLeft_toRightOf="@+id/modifyInputDate"
+                    >
+                </TextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/joinInNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/transparent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBaseline_toBaselineOf="@id/modifyInputMemberNumber"
+                    android:text="참가인원 : "
+                    >
+                </TextView>
+                <EditText
+                    android:id="@+id/modifyInputMemberNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/joinInNumber"
+                    app:layout_constraintLeft_toRightOf="@+id/joinInNumber"
+                    android:inputType="number"
+                    android:hint="숫자만 입력"
+                    android:textColorHint="@color/transparent"
+                    android:textColor="@color/transparent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textSize="15sp"
+                    >
+                </EditText>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/planText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/transparent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBaseline_toBaselineOf="@id/modifyInputContents"
+                    android:text="내용        : "
+                    >
+                </TextView>
+                <EditText
+                    android:id="@+id/modifyInputContents"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/transparent"
+                    app:layout_constraintTop_toTopOf="@+id/planText"
+                    app:layout_constraintLeft_toRightOf="@+id/planText"
+                    android:textColorHint="@color/transparent"
+                    android:hint="활동 내용작성바랍니다."
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textSize="15sp"
+                    >
+                </EditText>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/noticeButtonModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="등록"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/noticeButtonCancel" />
+
+        <Button
+            android:id="@+id/noticeButtonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="취소하기"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toRightOf="@id/noticeButtonModify"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

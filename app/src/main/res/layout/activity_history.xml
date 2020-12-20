@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?><!--레이아웃의 중첩이 발생하지 않는다.
+weight(가중치)설정하여 화면에 비율적으로 적용할 수 있다.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CommunityActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="내정보"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="1">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/introduceName"
+            android:layout_width="@dimen/historyTextLayout_width"
+            android:layout_height="wrap_content"
+            android:text="이름"
+            android:textSize="@dimen/historyFontSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/historyCurrentUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/historyFontSize"
+            app:layout_constraintLeft_toRightOf="@id/introduceName"
+
+            app:layout_constraintTop_toTopOf="@+id/introduceName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/introduceEmail"
+            android:layout_width="@dimen/historyTextLayout_width"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="@dimen/historyFontSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/historyCurrentUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/historyFontSize"
+            app:layout_constraintLeft_toRightOf="@id/introduceEmail"
+            app:layout_constraintTop_toTopOf="@+id/introduceEmail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/introducePhoneNumber"
+            android:layout_width="@dimen/historyTextLayout_width"
+            android:layout_height="wrap_content"
+            android:text="전화번호"
+            android:textSize="@dimen/historyFontSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/historyCurrentUserPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/historyFontSize"
+            app:layout_constraintLeft_toRightOf="@id/introducePhoneNumber"
+            app:layout_constraintTop_toTopOf="@+id/introducePhoneNumber" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/historyBirthday"
+            android:layout_width="@dimen/historyTextLayout_width"
+            android:layout_height="wrap_content"
+            android:text="생년월일"
+            android:textSize="@dimen/historyFontSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/historyCurrentUserBirthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:inputType="date"
+            android:textSize="@dimen/historyFontSize"
+            app:layout_constraintLeft_toRightOf="@id/historyBirthday"
+            app:layout_constraintTop_toTopOf="@+id/historyBirthday" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <Button
+            android:id="@+id/historyModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/backGroundTopBar"
+            android:text="수정"
+            android:textSize="20sp"
+            android:textColor="#F3F2F5"
+            android:textStyle="bold"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/membershipCancel">
+        </Button>
+
+        <Button
+            android:id="@+id/membershipCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/backGroundTopBar"
+            android:text="탈퇴"
+            android:textColor="#F3F2F5"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toRightOf="@id/historyModify"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/historyModify">
+        </Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내가 참여한 활동"
+        android:layout_gravity="center"
+        android:textSize="@dimen/historyFontSize" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="총 참여 : "
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/totalList"
+            >
+
+        </TextView>
+        <TextView
+            android:id="@+id/totalList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/historyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>
+
+
+</LinearLayout>
