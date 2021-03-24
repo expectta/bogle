@@ -440,9 +440,6 @@ public class HomeActivity extends YouTubeBaseActivity {
                     Message message = new Message();
                     message.setData(data);
                     handler.sendMessage(message);
-
-
-
                 }
             } catch (MalformedURLException e) {
                 e.printStackTrace();
