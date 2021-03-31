@@ -12,6 +12,9 @@
 > 6. 강사가 등록한 계획 게시글에대한 알림 
 > 7. main 화면 스쿠버 관련 youtube 영상 출력, 현재 날씨확인, 스킨스쿠버 관련 인터넷 게시글 보기
 
+### 기술스택
+Java, Android
+* Shared Preference를 활용한 데이터 저장
 ### 라이브러리
 > 1.opneWehter API (스킨스쿠버 활동에 적합한 날씨인지를 확인) <br>
  2.YouTubeAndroidPlayerApi - 강사들이 등록한 영상을 회원들과 공유 <br>
